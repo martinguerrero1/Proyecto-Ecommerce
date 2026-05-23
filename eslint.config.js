@@ -19,13 +19,13 @@ export default defineConfig([
       eslintConfigPrettier,
     ],
     plugins: {
-      eslintPluginPrettier,
+      prettier: eslintPluginPrettier,
     },
     languageOptions: {
       globals: globals.browser,
     },
     rules: {
-      "no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "error",
       "prettier/prettier": "error",
     },
