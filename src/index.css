@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@layer base {
+  body {
+    margin: 0;
+    border: 0;
+    font-family: sans-serif;
+    height: 100vh;
+  }
+
+  #root {
+    background: #000;
+    color: aqua;
+    height: 100%;
+  }
+}
