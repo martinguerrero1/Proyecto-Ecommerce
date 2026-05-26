@@ -1,6 +1,6 @@
 import type { Producto } from "./producto";
 
-interface ProductosApiResponse {
+export interface ProductosApiResponse {
   productos: Producto[];
   total: number;
   skip: number;

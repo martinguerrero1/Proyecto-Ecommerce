@@ -1,10 +1,30 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Catalogo from "./pages/Catalogo.tsx";
+import NotFound from "./pages/NotFound.tsx";
+import DetalleProducto from "./pages/DetalleProducto.tsx";
+
+const ruta = createBrowserRouter([
+  {
+    path: "/",
+    element: <Catalogo />,
+    index: true,
+  },
+  {
+    path: "/producto/:id",
+    element: <DetalleProducto />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={ruta} />
   </StrictMode>,
 );
